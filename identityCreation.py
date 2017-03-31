@@ -2,7 +2,7 @@
 """
 Created on Thu Mar 30 10:56:18 2017
 
-@author: mjerez
+@author: horrorclause
 """
 
 import secrets, random
@@ -14,7 +14,7 @@ import json
 #password, and selects random name. Assigns to dictionary info and exports to 
 #json file accounts.json
 
-file = open('C:/Users/Mario/Dropbox/Accounts/names.txt','r')
+file = open('''load names file''','r')
 data = file.read()
 names = data.strip('\xa0').split('\n')
 names = list(map(lambda s: s.split(), names))
