@@ -2,13 +2,13 @@
 """
 Created on Thu Mar 30 14:40:12 2017
 
-@author: mjerez
+@author: horrorclause
 """
 
 from selenium import webdriver
 import time
-from identityCreation import json_data
-#makeEmail function connects to protonmail and creates an email account
+#import IMPORT FILE WITH STORED ACCOUNTS
+
 
     
 def makeTA():
@@ -17,7 +17,7 @@ def makeTA():
     
     for k,v in json_data.items():
         
-        actualized = open('actualizedAccounts.txt', 'a')
+        actualized = open('''List of accounts that are actualized''', 'a')
         browser = webdriver.Chrome()
         browser.get('https://www.tripadvisor.com/')
             
@@ -37,11 +37,11 @@ def makeTA():
         time.sleep(15)                           
         
                     
-        actualized.write('\n'+k)    #Adds full name of actualized accounts to actualizedAccounts.txt
+        actualized.write('\n'+k)    #Adds full name of actualized accounts
         actualized.close()
         browser.quit()
         
-        time.sleep(6000)
+        time.sleep(600)
         
     
         
