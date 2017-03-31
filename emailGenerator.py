@@ -2,11 +2,11 @@
 """
 Created on Mon Mar 27 11:49:52 2017
 
-@author: mjerez
+@author: horrorclause
 """
 from selenium import webdriver
 import time
-from identityCreation import json_data
+'''import file with stored accounts'''
 #makeEmail function connects to protonmail and creates an email account
 
     
@@ -33,7 +33,7 @@ def makeEmail():
         browser.find_element_by_css_selector('.pm_button.primary').click()
         time.sleep(45)
         browser.quit()
-        actualized = open('actualizedAccounts.txt', 'a')            #Adds full name of actualized accounts to actualizedAccounts.txt
+        actualized = open('''file to store actualized accounts''', 'a')            #Adds full name of actualized accounts to
         actualized.write(k+'\n')
         actualized.close()
         
